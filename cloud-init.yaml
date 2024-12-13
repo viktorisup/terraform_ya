@@ -1,0 +1,12 @@
+#cloud-config
+datasource:
+  Ec2:
+    strict_id: false
+ssh_pwauth: no
+users:
+  - name: isup
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFZNU5Mi6NjvOaZ2htIGpt0Efw8lkdXp88rEH/2StIgD
